@@ -17,6 +17,7 @@ class SiameseNetwork(nn.Module):
 			nn.Linear(10, 2)
 		)
 	
+	# will return the outputted embeddings
 	def forward_once(self, x):
 		output = self.cnn1(x)
 		output = output.view(output.size()[0], -1)
